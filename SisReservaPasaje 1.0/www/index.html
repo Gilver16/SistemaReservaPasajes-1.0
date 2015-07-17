@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+    <!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="app_framework/2.1/css/af.ui.min.css">
+        <link rel="stylesheet" type="text/css" href="app_framework/2.1/css/icons.min.css">
+        <title>Blank App Designer Cordova Web App Project Template</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+        <!--
+  * The "meta viewport" tag (below) helps your app size appropriately to a device's ideal viewport.
+  * Note that Windows device viewports work better when initialized using the @viewport CSS rule.
+  * For a quick overview of "meta viewport" and @viewport, see this article:
+  *   http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag
+  * To see how it works, try your app on a real device with and without a "meta viewport" tag.
+  * Additional useful references include:
+  *   http://www.quirksmode.org/mobile/viewports.html
+  *   http://www.quirksmode.org/mobile/metaviewport/devices.html
+  *   https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html
+-->
+
+        <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+
+        <style>
+            /* following three (cascaded) are equivalent to above three meta viewport statements */
+            /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html */
+            /* see http://dev.w3.org/csswg/css-device-adapt/ */
+                @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+                @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+                /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+        </style>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work below -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+
+        <!-- Recommended location for your JavaScript libraries -->
+        <!-- These library references (below) are just examples to give you the general idea... -->
+        <!-- <script src="lib/mc/hammer.js"></script> -->
+        <!-- <script src="lib/ft/fastclick.js"></script> -->
+
+        <!--
+  * cordova.js is a phantom lib for "Cordova HTML5 web app," it does nothing in a "Standard HTML5 web app"
+  * Seeing a "Failed to load resource: net::ERR_FILE_NOT_FOUND" message caused by this "cordova.js" script?
+  * The cordova.js script is required if you convert your "Standard HTML5" project into a "Cordova" project.
+  * You can safely ignore the error or comment out this line if you will not be developing a Cordova app.
+-->
+        <script src="cordova.js" id="xdkJScordova_"></script>
+
+        <script src="js/app.js"></script>
+        <!-- for your event code, see README and file comments for details -->
+        <script src="js/init-app.js"></script>
+        <!-- for your init code, see README and file comments for details -->
+        <script src="xdk/init-dev.js"></script>
+        <!-- normalizes device and document ready events, see file for details -->
+        <!--            
+            You may substitute jQuery for the App Framework selector library.
+            See http://app-framework-software.intel.com/documentation.php#afui/afui_jquery
+        -->
+        <script type="application/javascript" src="app_framework/2.1/appframework.js"></script>
+        <script type="application/javascript" src="app_framework/2.1/appframework.ui.js" data-ver="1"></script>
+        <script type="application/javascript" src="js/index_user_scripts.js"></script>
+        <script type="application/javascript" src="xdk/ad/af_subpage.js"></script>
+        <script type="application/javascript" src="app_framework/pageChangeRepeater.js"></script>
+        <script type="application/javascript" src="js/reservar.js"></script>
+        <script type="application/javascript" src="js/resgistros.js"></script>
+    </head>
+
+    <body id="afui">
+
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+        <header class="wrapping-col wrap-element uib_w_1" data-uib="app_framework/header" data-ver="2" id="af-header-15">
+            <h1></h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_3" data-uib="app_framework/header" data-ver="2" id="af-header-1">
+            <h1>INICIAR SESION</h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_9 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-2"><a class="button backButton">Back</a>
+            <h1>BIENVENIDO</h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_22 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-0"><a class="button backButton">Back</a>
+            <h1>Horarios</h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_24 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-3"><a class="button backButton">Back</a>
+            <h1>RESERVAS</h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_34 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-4"><a class="button backButton">Back</a>
+            <h1></h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_46 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-5"><a class="button backButton">Back</a>
+            <h1>Horarios Y Rotas</h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_52 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-6"><a class="button backButton">Back</a>
+            <h1>Detalle de Viaje</h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_60" data-uib="app_framework/header" data-ver="2" id="af-header-0">
+            <h1></h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_66" data-uib="app_framework/header" data-ver="2" id="af-header-7">
+            <h1></h1>
+        </header>
+        <div class="uwrap" id="content">
+            <div class="upage vertical-col panel fondo" id="mainpage" data-header="af-header-1" data-footer="af-footer-0">
+                <div class="table-thing with-label widget uib_w_4 d-margins inputText LabelText labelText" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-inline" for="idUser">Usuario:</label>
+
+                    <input class="wide-control" placeholder="Placeholder Text" type="text" value="Gilver" id="idUser">
+                </div>
+                <div class="table-thing with-label widget uib_w_5 d-margins LabelText inputText labelText" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-inline" for="idPass">Contraseña:</label>
+
+                    <input class="wide-control" placeholder="Placeholder Text" type="text" value="Damiano" id="idPass">
+                </div>
+                <div class="table-thing with-label widget uib_w_6 d-margins labelText" data-uib="app_framework/select" data-ver="1">
+                    <label class="narrow-control label-inline" for="idPerfil">Perfil</label>
+
+                    <select class="wide-control" id="idPerfil">
+                        <option>Cliente</option>
+                        <option>Operador</option>
+                    </select>
+                </div><a class="button widget uib_w_7 d-margins" data-uib="app_framework/button" data-ver="1" id="idEntrar">Entrar</a><a class="button widget uib_w_8 d-margins" data-uib="app_framework/button" data-ver="1" id="idRegistrar" href="#idRegistrarse"
+                data-transition="fade">Registrarse</a>
+                <div class="widget uib_w_57 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/logueo.png">
+
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="upage vertical-col panel fondo" id="idMenu" data-header="af-header-2" data-footer="af-footer-1">
+                <div class="table-thing with-label widget uib_w_11 d-margins inputText" data-uib="app_framework/input" data-ver="1">
+                    <input class="wide-control" placeholder="Placeholder Text" type="text" value="Gilver Damiano Aparco" id="idNombres">
+                </div>
+                <div class="table-thing with-label widget uib_w_12 d-margins inputText" data-uib="app_framework/input" data-ver="1">
+                    <input class="wide-control" placeholder="Placeholder Text" type="text" value="47119094" id="idDNI">
+                </div>
+                <div class="button-grouped flex widget uib_w_13 d-margins" data-uib="app_framework/button_group" data-ver="1"><a class="button widget uib_w_14" data-uib="app_framework/button" data-ver="1" style="border-left-width: 1px; border-left-style: solid; border-left-color: rgb(102, 102, 102); border-top-left-radius: 6px; border-bottom-left-radius: 6px;"
+                    id="idReservar">Reservar</a><a class="button widget uib_w_15" data-uib="app_framework/button" data-ver="1" id="idRegistro">Registro</a><a class="button widget uib_w_16" data-uib="app_framework/button" data-ver="1" style="border-top-right-radius: 6px; border-bottom-right-radius: 6px;"
+                    id="idHorario">Horarios</a>
+                </div><a class="button widget uib_w_17 d-margins" data-uib="app_framework/button" data-ver="1" id="idSalir">Salir</a>
+            </div>
+            <div class="upage vertical-col panel fondo" id="idRegistros" data-header="af-header-0" data-footer="af-footer-2">
+                <ul class="list widget uib_w_18 d-margins" data-uib="app_framework/listview" data-ver="1" id="idRgistroL">
+                    <li class="widget uib_w_19" data-uib="app_framework/listitem" data-ver="1"><a href="#idDetalleRegistro" data-transition="fade">Lunes 20 Enero 2015</a>
+                    </li>
+                    <li class="widget uib_w_20" data-uib="app_framework/listitem" data-ver="1"><a href="#idDetalleRegistro" data-transition="fade">Martes 21 Enero 2015</a>
+                    </li>
+                    <li class="widget uib_w_21" data-uib="app_framework/listitem" data-ver="1"><a href="#idDetalleRegistro" data-transition="fade">Miercoles 22 Enero 2015</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="upage vertical-col panel fondo" id="idReservarPasaje" data-header="af-header-3" data-footer="af-footer-3">
+                <div class="table-thing with-label widget uib_w_26 d-margins inputText" data-uib="app_framework/input" data-ver="1">
+                    <input class="wide-control" placeholder="Placeholder Text" type="text" value="Gilver Damiano Aparco" id="idNombreR">
+                </div>
+                <div class="table-thing with-label widget uib_w_27 d-margins inputText" data-uib="app_framework/input" data-ver="1">
+                    <input class="wide-control" placeholder="Placeholder Text" type="text" value="47119094" id="idDNIR">
+                </div>
+                <div class="table-thing with-label widget uib_w_28 d-margins labelText" data-uib="app_framework/select" data-ver="1">
+                    <label class="narrow-control label-top-left" for="idOrigenR">Origen</label>
+
+                    <select class="wide-control" id="idOrigenR">
+                        <option>Andahuaylas</option>
+                        <option>Lima</option>
+                        <option>Cusco</option>
+                    </select>
+                </div>
+                <div class="table-thing with-label widget uib_w_29 d-margins labelText" data-uib="app_framework/select" data-ver="1">
+                    <label class="narrow-control label-top-left" for="idDestinoR">Destino</label>
+
+                    <select class="wide-control" id="idDestinoR">
+                        <option>Lima</option>
+                        <option>Andahuaylas</option>
+                        <option>Cusco</option>
+                    </select>
+                </div>
+                <div class="table-thing with-label widget uib_w_30 d-margins inputText labelText" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-top-left" for="idFsalidaR">F. Salida</label>
+
+                    <input class="wide-control" type="date" id="idFsalidaR">
+                </div>
+                <div class="table-thing with-label widget uib_w_31 d-margins labelText inputText" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-top-left" for="idHsalidaR">Hora Salida</label>
+
+                    <input class="wide-control" type="time" id="idHsalidaR">
+                </div>
+                <div class="table-thing with-label widget uib_w_32 d-margins labelText" data-uib="app_framework/select" data-ver="1">
+                    <label class="narrow-control label-top-left" for="idNHacientoR">N° Asiento</label>
+
+                    <select class="wide-control" id="idNHacientoR">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                    </select>
+                </div><a class="button widget uib_w_33 d-margins" data-uib="app_framework/button" data-ver="1" id="idReservarP">Reservar</a>
+            </div>
+            <div class="upage vertical-col panel fondo" id="idRegistrarse" data-header="af-header-4" data-footer="af-footer-4">
+                <div class="table-thing with-label widget uib_w_36 d-margins LabelText inputText" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-inline" for="idNombres">Nombres</label>
+                    <input class="wide-control" placeholder="Placeholder Text" type="text" value="Gilver Damiano Aparco" id="idNombres">
+                </div>
+                <div class="table-thing with-label widget uib_w_37 d-margins inputText LabelText" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-inline">DNI</label>
+                    <input class="wide-control" placeholder="Placeholder Text" type="text" value="47119094">
+                </div>
+
+                <div class="table-thing with-label widget uib_w_58 d-margins inputText LabelText" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-inline">Usuario</label>
+                    <input class="wide-control" placeholder="Placeholder Text" type="text">
+                </div>
+                <div class="table-thing with-label widget uib_w_59 d-margins inputText" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-inline">Contraseña</label>
+                    <input class="wide-control" placeholder="Placeholder Text" type="text">
+                </div>
+                <div class="table-thing with-label widget uib_w_38 d-margins" data-uib="app_framework/radio_button_group" data-ver="1" data-child-name="af-group-0">
+                    <label class="narrow-control label-inline">Sexo</label>
+                    <div class="wide-control">
+                        <div class="widget uib_w_39" data-uib="app_framework/radio_button" data-ver="1">
+                            <input type="radio" id="af-radio-0" name="af-group-0">
+                            <label class="content-box" for="af-radio-0">Varon</label>
+                        </div>
+                        <div class="widget uib_w_40" data-uib="app_framework/radio_button" data-ver="1">
+                            <input type="radio" id="af-radio-1" name="af-group-0">
+                            <label class="content-box" for="af-radio-1">Mujer</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-thing with-label widget uib_w_41 d-margins LabelText inputText" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-inline">Edad</label>
+                    <input class="wide-control" placeholder="Placeholder Text" type="text" value="20">
+                </div>
+                <div class="button-grouped flex widget uib_w_42 d-margins" data-uib="app_framework/button_group" data-ver="1"><a class="button widget uib_w_43" data-uib="app_framework/button" data-ver="1" style="border-left-width: 1px; border-left-style: solid; border-left-color: rgb(102, 102, 102); border-top-left-radius: 6px; border-bottom-left-radius: 6px;"
+                    id="idGuardarN" href="#idMenu" data-transition="fade">Guardar</a>
+                    <a class="button widget uib_w_44" data-uib="app_framework/button" data-ver="1">Cancelar</a>
+                </div>
+            </div>
+            <div class="upage vertical-col panel fondo" id="idHorariosRotas" data-header="af-header-5" data-footer="af-footer-5">
+                <div class="table-thing with-label widget uib_w_47 d-margins" data-uib="app_framework/select" data-ver="1">
+                    <select class="wide-control" id="idCiudad">
+                        <option>Andahuaylas-Lima</option>
+                        <option>Lima-Andahuaylas</option>
+                    </select>
+                </div>
+                <div class="widget uib_w_48 d-margins" data-uib="app_framework/input_group" data-ver="1">
+                    <div class="formGroupHead">Horario</div>
+                    <div class="input-group">
+                        <div class="col uib_col_1 single-col" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+
+                                <div class="table-thing with-label widget uib_w_49 d-margins" data-uib="app_framework/input" data-ver="1">
+                                    <input class="wide-control" type="time">
+                                </div>
+                                <div class="table-thing with-label widget uib_w_50 d-margins" data-uib="app_framework/input" data-ver="1">
+                                    <input class="wide-control" type="time">
+                                </div>
+                                <div class="table-thing with-label widget uib_w_51 d-margins" data-uib="app_framework/input" data-ver="1">
+                                    <input class="wide-control" type="time">
+                                </div><span class="uib_shim"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="upage vertical-col panel fondo" id="idDetalleRegistro" data-header="af-header-6" data-footer="af-footer-6">
+                <div class="table-thing with-label widget uib_w_54 d-margins" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-top-left">Origen</label>
+                    <input class="wide-control" placeholder="Placeholder Text" type="text">
+                </div>
+                <div class="table-thing with-label widget uib_w_55 d-margins" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-top-left">Destino</label>
+                    <input class="wide-control" placeholder="Placeholder Text" type="text">
+                </div>
+                <div class="table-thing with-label widget uib_w_56 d-margins" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-top-left">Hora</label>
+                    <input class="wide-control" type="time">
+                </div>
+            </div>
+            <div class="upage vertical-col panel fondo" id="idHorarios" data-header="af-header-0" data-footer="af-footer-7">
+                <ul class="list widget uib_w_62 d-margins" data-uib="app_framework/listview" data-ver="1" id="idHorariosH">
+                    <li class="widget uib_w_63" data-uib="app_framework/listitem" data-ver="1"><a>List Item</a>
+                    </li>
+                    <li class="widget uib_w_64" data-uib="app_framework/listitem" data-ver="1"><a>List Item</a>
+                    </li>
+                    <li class="widget uib_w_65" data-uib="app_framework/listitem" data-ver="1"><a>List Item</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <footer class="wrap-element uib_w_67" data-uib="app_framework/footer" data-ver="1" id="af-footer-8"></footer>
+        <footer class="wrap-element uib_w_61" data-uib="app_framework/footer" data-ver="1" id="af-footer-7"></footer>
+        <footer class="wrap-element uib_w_53" data-uib="app_framework/footer" data-ver="1" id="af-footer-6"></footer>
+        <footer class="wrap-element uib_w_45" data-uib="app_framework/footer" data-ver="1" id="af-footer-5"></footer>
+        <footer class="wrap-element uib_w_35" data-uib="app_framework/footer" data-ver="1" id="af-footer-4"></footer>
+        <footer class="wrap-element uib_w_25" data-uib="app_framework/footer" data-ver="1" id="af-footer-3"></footer>
+        <footer class="wrap-element uib_w_23" data-uib="app_framework/footer" data-ver="1" id="af-footer-2"></footer>
+        <footer class="wrap-element uib_w_10" data-uib="app_framework/footer" data-ver="1" id="af-footer-1"></footer>
+        <footer class="wrap-element uib_w_2" data-uib="app_framework/footer" data-ver="1" id="af-footer-0"></footer>
+    </body>
+
+</html>
