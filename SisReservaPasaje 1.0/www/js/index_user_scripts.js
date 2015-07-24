@@ -8,7 +8,7 @@
  {
     
     $("body").append('<a id="irlista" href="#idMenu"></a>');
-     $("body").append('<a id="irHorario" href="#idHorariosRotas"></a>');
+     $("body").append('<a id="irHorario" href="#idHorarios"></a>');
     $("body").append('<a id="irRegistros" href="#idRegistros"></a>');
     $("body").append('<a id="irReservarP" href="#idReservarPasaje"></a>');
      $("body").append('<a id="irSalir" href="#mainpage"></a>');
@@ -43,8 +43,9 @@
                 */
                     var usuari=dato.data.usuario;
                     var perfil=dato.data.perfil;
-                    var cajadetexto=document.getElementById('idRUsuario');
-                    cajadetexto.value=usuari+' '+perfil;
+                    var logueoUser=document.getElementById('idUser').value;  
+                    document.getElementById('idNombres').value=logueoUser;
+                   // cajadetexto.value=usuari+' '+perfil;
                 }else{
                     navigator.notification.alert(
                         'ACCCESO DENEGADO',  
@@ -72,12 +73,10 @@
     {
         /* your code goes here */ 
         $("#irHorario").click();
+        HORARIOS.cargarHorarios();
     });
     
-        /* button  #idRegistrar */
-    
-    
-        /* button  #idSalir */
+      
     $(document).on("click", "#idSalir", function(evt)
     {
          $("#irSalir").click();
@@ -88,7 +87,7 @@
     {
         /* your code goes here */ 
         var param={};
-        param.nombres=$("#idNOmbresR").val();
+        param.nombres=$("#idNombresR").val();
         param.dni=$("#idDNIR").val();
         param.origen=$("#idOrigenR").val();
         param.destino=$("#idDestinoR").val();
@@ -107,6 +106,21 @@
     $(document).on("click", "#idReservar", function(evt)
     {
         $("#irReservarP").click();
+    });
+    
+        /* button  #idRegistrarGuardar */
+    $(document).on("click", "#idRegistrarGuardar", function(evt)
+    {
+        /* your code goes here */ 
+        var param={};
+            param.nombres=$("#idNombres").val();
+            param.dni=$("#idDNI").val();
+            param.usuario=$("#idUsuarioN").val();
+            param.contrasena=$("#idContrasena").val();
+            param.sexo=$("#idSexo").val();
+            param.edad=$("#idEdad").val();
+            
+            REGISTRAR.registarCliente(param);
     });
     
     }

@@ -73,6 +73,7 @@
         <script type="application/javascript" src="app_framework/pageChangeRepeater.js"></script>
         <script type="application/javascript" src="js/reservar.js"></script>
         <script type="application/javascript" src="js/resgistros.js"></script>
+        <script type="application/javascript" src="js/horarios.js"></script>
     </head>
 
     <body id="afui">
@@ -213,25 +214,29 @@
                 </div><a class="button widget uib_w_33 d-margins" data-uib="app_framework/button" data-ver="1" id="idReservarP">Reservar</a>
             </div>
             <div class="upage vertical-col panel fondo" id="idRegistrarse" data-header="af-header-4" data-footer="af-footer-4">
-                <div class="table-thing with-label widget uib_w_36 d-margins LabelText inputText" data-uib="app_framework/input" data-ver="1">
+                <div class="table-thing with-label widget uib_w_36 d-margins LabelText inputText label1" data-uib="app_framework/input" data-ver="1">
                     <label class="narrow-control label-inline" for="idNombres">Nombres</label>
                     <input class="wide-control" placeholder="Placeholder Text" type="text" value="Gilver Damiano Aparco" id="idNombres">
                 </div>
-                <div class="table-thing with-label widget uib_w_37 d-margins inputText LabelText" data-uib="app_framework/input" data-ver="1">
-                    <label class="narrow-control label-inline">DNI</label>
-                    <input class="wide-control" placeholder="Placeholder Text" type="text" value="47119094">
+                <div class="table-thing with-label widget uib_w_37 d-margins inputText LabelText label1" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-inline" for="idDNI">DNI</label>
+
+                    <input class="wide-control" placeholder="Placeholder Text" type="text" value="47119094" id="idDNI">
                 </div>
 
-                <div class="table-thing with-label widget uib_w_58 d-margins inputText LabelText" data-uib="app_framework/input" data-ver="1">
-                    <label class="narrow-control label-inline">Usuario</label>
-                    <input class="wide-control" placeholder="Placeholder Text" type="text">
+                <div class="table-thing with-label widget uib_w_58 d-margins inputText LabelText label1" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-inline" for="idUsuarioN">Usuario</label>
+
+                    <input class="wide-control" placeholder="Placeholder Text" type="text" id="idUsuarioN">
                 </div>
-                <div class="table-thing with-label widget uib_w_59 d-margins inputText" data-uib="app_framework/input" data-ver="1">
-                    <label class="narrow-control label-inline">Contraseña</label>
-                    <input class="wide-control" placeholder="Placeholder Text" type="text">
+                <div class="table-thing with-label widget uib_w_59 d-margins inputText label1" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-inline" for="idContrasena">Contraseña</label>
+
+                    <input class="wide-control" placeholder="Placeholder Text" type="text" id="idContrasena">
                 </div>
-                <div class="table-thing with-label widget uib_w_38 d-margins" data-uib="app_framework/radio_button_group" data-ver="1" data-child-name="af-group-0">
+                <div class="table-thing with-label widget uib_w_38 d-margins label1" data-uib="app_framework/radio_button_group" data-ver="1" data-child-name="af-group-0" id="idSexo">
                     <label class="narrow-control label-inline">Sexo</label>
+
                     <div class="wide-control">
                         <div class="widget uib_w_39" data-uib="app_framework/radio_button" data-ver="1">
                             <input type="radio" id="af-radio-0" name="af-group-0">
@@ -243,12 +248,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="table-thing with-label widget uib_w_41 d-margins LabelText inputText" data-uib="app_framework/input" data-ver="1">
-                    <label class="narrow-control label-inline">Edad</label>
-                    <input class="wide-control" placeholder="Placeholder Text" type="text" value="20">
+                <div class="table-thing with-label widget uib_w_41 d-margins LabelText inputText label1" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-inline" for="idEdad">Edad</label>
+
+                    <input class="wide-control" placeholder="Placeholder Text" type="text" value="20" id="idEdad">
                 </div>
                 <div class="button-grouped flex widget uib_w_42 d-margins" data-uib="app_framework/button_group" data-ver="1"><a class="button widget uib_w_43" data-uib="app_framework/button" data-ver="1" style="border-left-width: 1px; border-left-style: solid; border-left-color: rgb(102, 102, 102); border-top-left-radius: 6px; border-bottom-left-radius: 6px;"
-                    id="idGuardarN" href="#idMenu" data-transition="fade">Guardar</a>
+                    id="idRegistrarGuardar">Guardar</a>
                     <a class="button widget uib_w_44" data-uib="app_framework/button" data-ver="1">Cancelar</a>
                 </div>
             </div>
@@ -280,17 +286,20 @@
                 </div>
             </div>
             <div class="upage vertical-col panel fondo" id="idDetalleRegistro" data-header="af-header-6" data-footer="af-footer-6">
-                <div class="table-thing with-label widget uib_w_54 d-margins" data-uib="app_framework/input" data-ver="1">
-                    <label class="narrow-control label-top-left">Origen</label>
-                    <input class="wide-control" placeholder="Placeholder Text" type="text">
+                <div class="table-thing with-label widget uib_w_54 d-margins LabelText label1" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-top-left" for="idOriginD">Origen</label>
+
+                    <input class="wide-control" placeholder="Placeholder Text" type="text" id="idOriginD">
                 </div>
-                <div class="table-thing with-label widget uib_w_55 d-margins" data-uib="app_framework/input" data-ver="1">
-                    <label class="narrow-control label-top-left">Destino</label>
-                    <input class="wide-control" placeholder="Placeholder Text" type="text">
+                <div class="table-thing with-label widget uib_w_55 d-margins label1" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-top-left" for="idDestinoD">Destino</label>
+
+                    <input class="wide-control" placeholder="Placeholder Text" type="text" id="idDestinoD">
                 </div>
-                <div class="table-thing with-label widget uib_w_56 d-margins" data-uib="app_framework/input" data-ver="1">
-                    <label class="narrow-control label-top-left">Hora</label>
-                    <input class="wide-control" type="time">
+                <div class="table-thing with-label widget uib_w_56 d-margins label1" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-top-left" for="idHoraD">Hora</label>
+
+                    <input class="wide-control" type="time" id="idHoraD">
                 </div>
             </div>
             <div class="upage vertical-col panel fondo" id="idHorarios" data-header="af-header-0" data-footer="af-footer-7">
